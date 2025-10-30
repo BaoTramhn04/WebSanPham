@@ -148,6 +148,7 @@ D:\KiemTra\WebProductManagement\obj\Debug\net9.0\WebProductManagement.csproj.Cor
 D:\KiemTra\WebProductManagement\obj\Debug\net9.0\WebProductManagement.MvcApplicationPartsAssemblyInfo.cache
 D:\KiemTra\WebProductManagement\obj\Debug\net9.0\WebProductManagement.RazorAssemblyInfo.cache
 D:\KiemTra\WebProductManagement\obj\Debug\net9.0\WebProductManagement.RazorAssemblyInfo.cs
+D:\KiemTra\WebProductManagement\obj\Debug\net9.0\WebProductManagement.sourcelink.json
 D:\KiemTra\WebProductManagement\obj\Debug\net9.0\rjimswa.dswa.cache.json
 D:\KiemTra\WebProductManagement\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 D:\KiemTra\WebProductManagement\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
