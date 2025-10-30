@@ -1,0 +1,14 @@
+@model WebProductManagement.Models.Product
+
+<h2 class="text-center mb-4 text-danger">Xác nhận xóa sản phẩm</h2>
+
+<div class="alert alert-warning text-center w-50 mx-auto">
+    <h5>Bạn có chắc muốn xóa sản phẩm này không?</h5>
+    <p><strong>@Model.Name</strong></p>
+</div>
+
+<form asp-action="Delete" method="post" class="text-center">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

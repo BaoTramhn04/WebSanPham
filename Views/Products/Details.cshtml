@@ -1,0 +1,17 @@
+@model WebProductManagement.Models.Product
+
+<h2 class="text-center mb-4">Chi tiết sản phẩm</h2>
+
+<div class="card w-50 mx-auto shadow">
+    <div class="card-body">
+        <h4 class="card-title text-primary">@Model.Name</h4>
+        <p><strong>Giá:</strong> @Model.Price.ToString("N0") VNĐ</p>
+        <p><strong>Tồn kho:</strong> @Model.Stock</p>
+        <p><strong>Mô tả:</strong> @Model.Description</p>
+    </div>
+</div>
+
+<div class="mt-4 text-center">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Sửa</a>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</div>
