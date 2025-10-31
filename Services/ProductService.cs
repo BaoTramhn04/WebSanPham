@@ -10,7 +10,6 @@ namespace WebProductManagement.Services
         public ProductService(IProductRepository repo) => _repo = repo;
 
         public async Task<IEnumerable<Product>> GetAllAsync() => await _repo.GetAllAsync();
-
         public async Task<Product?> GetByIdAsync(int id) => await _repo.GetByIdAsync(id);
 
         public async Task<bool> CreateAsync(Product product)
@@ -33,5 +32,11 @@ namespace WebProductManagement.Services
             await _repo.SaveAsync();
             return true;
         }
+
+           public async Task<PagedResult<Product>> GetPagedProductsAsync(string? search, int page, int pageSize)
+        {
+            return await _repo.GetPagedAsync(search, page, pageSize);
+        }
+
     }
 }

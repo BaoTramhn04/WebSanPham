@@ -10,5 +10,8 @@ namespace WebProductManagement.Repositories.Interfaces
         Task UpdateAsync(Product product);
         Task DeleteAsync(int id);
         Task SaveAsync();
+
+        Task<PagedResult<Product>> GetPagedAsync(string? search, int page, int pageSize);
+
     }
 }

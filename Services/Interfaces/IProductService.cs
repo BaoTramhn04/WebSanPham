@@ -9,5 +9,8 @@ namespace WebProductManagement.Services.Interfaces
         Task<bool> CreateAsync(Product product);
         Task<bool> UpdateAsync(Product product);
         Task<bool> DeleteAsync(int id);
+    
+        Task<PagedResult<Product>> GetPagedProductsAsync(string? search, int page, int pageSize);
+
     }
 }

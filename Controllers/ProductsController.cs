@@ -9,11 +9,7 @@ namespace WebProductManagement.Controllers
         private readonly IProductService _service;
         public ProductsController(IProductService service) => _service = service;
 
-        public async Task<IActionResult> Index()
-        {
-            var products = await _service.GetAllAsync();
-            return View(products);
-        }
+       
 
         public IActionResult Create() => View();
 
@@ -60,5 +56,22 @@ namespace WebProductManagement.Controllers
             await _service.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
+
+          // Index: search + pagination
+        public async Task<IActionResult> Index(string? search, int page = 1)
+        {
+            const int pageSize = 4; 
+            if (page < 1) page = 1;
+
+            var paged = await _service.GetPagedProductsAsync(search, page, pageSize);
+
+            ViewBag.Search = search;
+            ViewBag.Page = paged.Page;
+            ViewBag.TotalPages = paged.TotalPages;
+
+            return View(paged.Items);
+        }
+    
     }
 }
+
